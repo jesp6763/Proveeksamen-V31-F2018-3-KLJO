@@ -1,18 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movie DB</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+    <header class="container">
+        <h1 class=".navbar-brand my-3">Personal Movie DB</h1>
+    </header>
+
+    <main class="mt-5">
+        <section id="favorite-movies">
+            <div class="container">
+                <h2 class="font-weight-normal">Favorite Movies</h2>
+            </div>
+
+            <div class="movie-list mt-4">
+                <div class="container pb-3">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
+                            <article class="card movie-item mx-auto">
+                                <div class="card-img-top"></div>
+                                <div class="card-body">
+                                    <h4 class="card-title font-weight-light">A Sunday in Hell</h4>
+                                    <p class="card-text">Year: 1922</p>
+                                    <p class="card-text">Genre: Sci-fi</p>
+                                    <a href="#">Add to favorites</a>
+                                    <a href="#" class="d-none">Remove from favorites</a>
+                                </div>
+
+                                <div class="movie-hover-description p-2">
+                                    <h1 class="font-weight-bold">Description</h1>
+                                    <p class="mt-2">Some crazy movie about some fake sci-fi. It is not even sci-fi.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="all-movies">
+            <div class="container mt-4">
+                <h2 class="font-weight-normal">All Movies</h2>
+            </div>
+
+            <div class="movie-list mt-4">
+                <div class="container pb-3">
+                    <div class="row">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-2">
+        <p class="text-center">Personal Movie DB - &copy; 2018</p>
+    </footer>
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="js/Model/Movie.js"></script>
+    <script src="js/View/MovieCard.js"></script>
+    <script src="js/View/MoviesPage.js"></script>
+    <script>
+        window.addEventListener('load', MoviesPage.SetupUI);
+    </script>
 </body>
+
 </html>
