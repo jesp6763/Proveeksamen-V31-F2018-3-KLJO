@@ -1,0 +1,58 @@
+{
+    "movie1": {
+        "title" : "A Sunday in Hell",
+        "description" : "The film follows the French Paris-Roubaix spring classic, notorious for the hellish paves or cobbled roads of the north, which are no longer used for traffic but only for transporting,",
+        "director" : "Jørgen Leth",
+        "year" : "1977",
+        "genre" : "Documentary",
+        "img" : "a_sunday_in_hell.bmp"
+    },
+    "movie2": {
+        "title" : "Reptilicus",
+        "description" : "After copper miners discover part of the frozen tail of a prehistoric monster in Lapland, scientists inadvertently bring it back to life",
+        "director" : "Poul Bang",
+        "year" : "1961",
+        "genre" : "Sci-Fi",
+        "img" : "reptilicus.bmp"
+    },
+    "movie3": {
+        "title" : "The Live",
+        "description" : "A drifter discovers a pair of sunglasses that allow him to wake up to the fact that aliens have taken over the Earth.",
+        "director" : "John Carpenter",
+        "year" : "1988",
+        "genre" : "Sci-Fi",
+        "img" : "they_live.bmp"
+    },
+    "movie4": {
+        "title" : "Pi",
+        "description" : "A paranoid mathematician searches for a key number that will unlock the universal patterns found in nature.",
+        "director" : "Darren Aronofsky",
+        "year" : "1998",
+        "genre" : "Thriller",
+        "img" : "pi.bmp"
+    },
+    "movie5": {
+        "title" : "Groundhog Day",
+        "description" : "A weatherman finds himself inexplicably living the same day over and over again. ",
+        "director" : "Harold Ramis",
+        "year" : "1993",
+        "genre" : "Comedy",
+        "img" : "groundhog_day.bmp"
+    },
+    "movie6": {
+        "title" : "Trading Places",
+        "description" : "A snobbish investor and a wily street con artist find their positions reversed as part of a bet by two callous millionaires. ",
+        "director" : "John Landis",
+        "year" : "1983",
+        "genre" : "Comedy",
+        "img" : "trading_places.bmp"
+    },
+    "movie7": {
+        "title" : "Brazil",
+        "description" : "A bureaucrat, in a retro-future world, tries to correct an administrative error, and becomes an enemy of the state.",
+        "director" : "Terry Gilliam",
+        "year" : "1085",
+        "genre" : "Dystopian",
+        "img" : "brazil.bmp"
+    }
+}
