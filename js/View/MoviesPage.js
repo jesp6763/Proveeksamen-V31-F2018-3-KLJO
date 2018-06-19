@@ -10,7 +10,7 @@ class MoviesPage
 
 
         window.addEventListener('unload', function(){
-            // Movie.SaveAll();
+            Movie.SaveAll();
         });
     }
 
