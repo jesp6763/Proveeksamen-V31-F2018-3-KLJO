@@ -1,54 +1,55 @@
 class Movie
 {
-    constructor(title, genre, year, author, description, imageUrl, isFavorite){
-        this.title = title;
-        this.genre = genre;
-        this.year = year;
-        this.author = author;
-        this.description = description;
-        this.imageUrl = imageUrl;
-        this.isFavorite = isFavorite;
+    constructor(slots){
+        this.id = slots.id;
+        this.title = slots.title;
+        this.genre = slots.genre;
+        this.year = slots.year;
+        this.director = slots.director;
+        this.description = slots.description;
+        this.img = slots.img;
+        this.isFavorite = slots.isFavorite;
     }
     
-    static CreateTestData()
+    static CreateTestData(callback)
     {
-        Movie.Instances['Sunday Drive'] = {
-            title: 'Sunday Drive',
-            genre: 'Horror',
-            year: 2018,
-            author: 'Jesper',
-            description: 'A crazy sunday night, peacefully driving at night on a sunday. But something lurks in the shadows...',
-            imageUrl: 'img/a_sunday_in_hell.bmp',
-            isFavorite: false
-        };
+        let xhttpRequest = new XMLHttpRequest();
+        xhttpRequest.overrideMimeType("application/json");
 
-        Movie.Instances['Classy Gore'] = {
-            title: 'Classy Gore',
-            genre: 'Action',
-            year: 2017,
-            author: 'Jesper',
-            description: 'Gory but classy.',
-            imageUrl: 'img/they_live.bmp',
-            isFavorite: false
-        };
+        xhttpRequest.open('GET', 'movies.json', true);
 
-        this.SaveAll();
+        xhttpRequest.onreadystatechange = function(){
+            if(xhttpRequest.readyState == 4){
+                if(xhttpRequest.status == "200"){
+                    Movie.Instances = JSON.parse(xhttpRequest.responseText);
+                    Movie.SaveAll();
+                    callback();
+                }
+            }
+        }
+
+        xhttpRequest.send(null);
     }
 
     static SaveAll()
     {
-        this.SetMovieDB(JSON.stringify(Movie.Instances));
+        this._SetMovieDB(JSON.stringify(Movie.Instances));
     }
 
-    static LoadAll()
+    static LoadAll(onLoaded)
     {
-        if(GetMovieDB())
+        if(this._GetMovieDB())
         {
-            Movie.Instances = JSON.parse(GetMovieDB());
+            Movie.Instances = JSON.parse(this._GetMovieDB());
+            onLoaded();
+            console.log("Loaded.");
         }
         else
         {
-            this.CreateTestData();
+            this.CreateTestData(function(){
+                onLoaded();
+                console.log("Test data created.");
+            });
         }
     }
 

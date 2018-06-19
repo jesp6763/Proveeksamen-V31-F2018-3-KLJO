@@ -25,7 +25,8 @@ body{
 
 .movie-item div.card-img-top{
     height: 180px;
-    background: url('../img/a_sunday_in_hell.bmp') top;
+    background: url('../img/a_sunday_in_hell.bmp') top no-repeat;
+    background-size: 260px auto;
 }
 
 .movie-hover-description{
