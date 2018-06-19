@@ -14,7 +14,6 @@ class MovieCard {
         let movies = parent.getElementsByClassName('movie-item');
 
         this.mainElement = movies.item(0).parentElement;
-        this.movieTitle = movie.title;
         this.mainElement.querySelector('.card-img-top').style.backgroundImage = 'url(\''.concat('img/', movie.img, '\')');
         this.buttons = {
             addToFavorites: this.mainElement.querySelector('.card-body > a'),
