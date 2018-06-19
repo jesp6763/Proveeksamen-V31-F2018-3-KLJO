@@ -61,6 +61,12 @@ class MovieCard {
      */
     static _GenerateHTMLString(movie)
     {
+        let genreString = '';
+        for (let i = 0; i < movie.genres.length; i++) {
+            const genre = movie.genres[i];
+            genreString += genre.concat(', ');
+        }
+
         return `
         <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
             <article class="card movie-item mx-auto">
@@ -68,13 +74,15 @@ class MovieCard {
                 <div class="card-body">
                     <h4 class="card-title font-weight-light">${movie.title}</h4>
                     <p class="card-text">Year: ${movie.year}</p>
-                    <p class="card-text">Genre: ${movie.genre}</p>
+                    <p class="card-text">Genre: ${genreString.slice(0, -2)}</p>
+                    <p class="card-text">Director: ${movie.director}</p>
                     <a href="#" onclick>Add to favorites</a>
                     <a href="#" class="d-none">Remove from favorites</a>
                 </div>
 
                 <div class="movie-hover-description p-2">
                     <h1 class="font-weight-bold">Description</h1>
+                    <hr class="m-0">
                     <p class="mt-2">${movie.description}</p>
                 </div>
             </article>

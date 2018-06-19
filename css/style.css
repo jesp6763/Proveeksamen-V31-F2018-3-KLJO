@@ -3,9 +3,13 @@ body{
     color: white;
 }
 
+hr{
+    background-color: rgb(107, 107, 107);
+}
+
 #favorite-movies .movie-list{
     background-color: #272727;
-    min-height: 360px;
+    min-height: 380px;
 }
 
 .movie-item{

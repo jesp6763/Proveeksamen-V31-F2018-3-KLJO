@@ -3,7 +3,7 @@ class Movie
     constructor(slots){
         this.id = slots.id;
         this.title = slots.title;
-        this.genre = slots.genre;
+        this.genres = slots.genres;
         this.year = slots.year;
         this.director = slots.director;
         this.description = slots.description;
