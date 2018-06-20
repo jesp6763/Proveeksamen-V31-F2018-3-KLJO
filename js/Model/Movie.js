@@ -13,22 +13,10 @@ class Movie
     
     static CreateTestData(callback)
     {
-        let xhttpRequest = new XMLHttpRequest();
-        xhttpRequest.overrideMimeType("application/json");
-
-        xhttpRequest.open('GET', 'movies.json', true);
-
-        xhttpRequest.onreadystatechange = function(){
-            if(xhttpRequest.readyState == 4){
-                if(xhttpRequest.status == "200"){
-                    Movie.Instances = JSON.parse(xhttpRequest.responseText);
-                    Movie.SaveAll();
-                    callback();
-                }
-            }
-        }
-
-        xhttpRequest.send(null);
+        HTTPRequestUtil.RequestAsync('GET', 'movies.json', function(responseText){
+            Movie.Instances = JSON.parse(responseText);
+            Movie.SaveAll();
+        });
     }
 
     static SaveAll()
