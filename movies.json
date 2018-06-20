@@ -1,72 +1,30 @@
 {
     "movie1": {
-        "id": "movie1",
-        "title" : "A Sunday in Hell",
-        "description" : "The film follows the French Paris-Roubaix spring classic, notorious for the hellish paves or cobbled roads of the north, which are no longer used for traffic but only for transporting,",
-        "director" : "Jørgen Leth",
-        "year" : "1977",
-        "genres" : ["Documentary"],
-        "img" : "a_sunday_in_hell.bmp",
-        "isFavorite": false
+        "title" : "Saving Private Ryan",
+        "year" : "1998"
     },
     "movie2": {
-        "id": "movie2",
         "title" : "Reptilicus",
-        "description" : "After copper miners discover part of the frozen tail of a prehistoric monster in Lapland, scientists inadvertently bring it back to life",
-        "director" : "Poul Bang",
-        "year" : "1961",
-        "genres" : ["Sci-Fi", "Action"],
-        "img" : "reptilicus.bmp",
-        "isFavorite": false
+        "year" : "1961"
     },
     "movie3": {
-        "id": "movie3",
-        "title" : "The Live",
-        "description" : "A drifter discovers a pair of sunglasses that allow him to wake up to the fact that aliens have taken over the Earth.",
-        "director" : "John Carpenter",
-        "year" : "1988",
-        "genres" : ["Sci-Fi"],
-        "img" : "they_live.bmp",
-        "isFavorite": false
+        "title" : "They Live",
+        "year" : "1988"
     },
     "movie4": {
-        "id": "movie4",
         "title" : "Pi",
-        "description" : "A paranoid mathematician searches for a key number that will unlock the universal patterns found in nature.",
-        "director" : "Darren Aronofsky",
-        "year" : "1998",
-        "genres" : ["Thriller"],
-        "img" : "pi.bmp",
-        "isFavorite": false
+        "year" : "1998"
     },
     "movie5": {
-        "id": "movie5",
         "title" : "Groundhog Day",
-        "description" : "A weatherman finds himself inexplicably living the same day over and over again. ",
-        "director" : "Harold Ramis",
-        "year" : "1993",
-        "genres" : ["Comedy"],
-        "img" : "groundhog_day.bmp",
-        "isFavorite": false
+        "year" : "1993"
     },
     "movie6": {
-        "id": "movie6",
         "title" : "Trading Places",
-        "description" : "A snobbish investor and a wily street con artist find their positions reversed as part of a bet by two callous millionaires. ",
-        "director" : "John Landis",
-        "year" : "1983",
-        "genres" : ["Comedy"],
-        "img" : "trading_places.bmp",
-        "isFavorite": false
+        "year" : "1983"
     },
     "movie7": {
-        "id": "movie7",
         "title" : "Brazil",
-        "description" : "A bureaucrat, in a retro-future world, tries to correct an administrative error, and becomes an enemy of the state.",
-        "director" : "Terry Gilliam",
-        "year" : "1085",
-        "genres" : ["Dystopian"],
-        "img" : "brazil.bmp",
-        "isFavorite": false
+        "year" : "1985"
     }
 }
