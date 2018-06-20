@@ -14,7 +14,7 @@ class MovieCard {
         let movies = parent.getElementsByClassName('movie-item');
 
         this.mainElement = movies.item(0).parentElement;
-        this.mainElement.querySelector('.card-img-top').style.backgroundImage = 'url(\''.concat('img/', movie.img, '\')');
+        this.mainElement.querySelector('.card-img-top').style.backgroundImage = 'url(\'' + movie.img + '\')';
         this.buttons = {
             addToFavorites: this.mainElement.querySelector('.card-body > a'),
             removeFromFavorites: this.mainElement.getElementsByTagName('a')[1]
@@ -22,11 +22,11 @@ class MovieCard {
 
         let _self = this;
         this.mainElement.querySelector('.card-body > a').addEventListener('click', function(){
-            _self.AddToFavorites(_self, movie.id);
+            _self.AddToFavorites(_self, movie.title);
         });
 
         this.mainElement.getElementsByTagName('a')[1].addEventListener('click', function(){
-            _self.RemoveFromFavorites(_self, movie.id);
+            _self.RemoveFromFavorites(_self, movie.title);
         });
 
         if(movie.isFavorite)
@@ -60,12 +60,6 @@ class MovieCard {
      */
     static _GenerateHTMLString(movie)
     {
-        let genreString = '';
-        for (let i = 0; i < movie.genres.length; i++) {
-            const genre = movie.genres[i];
-            genreString += genre.concat(', ');
-        }
-
         return `
         <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
             <article class="card movie-item mx-auto">
@@ -73,7 +67,7 @@ class MovieCard {
                 <div class="card-body">
                     <h4 class="card-title font-weight-light">${movie.title}</h4>
                     <p class="card-text">Year: ${movie.year}</p>
-                    <p class="card-text">Genre: ${genreString.slice(0, -2)}</p>
+                    <p class="card-text">Genre: ${movie.genres}</p>
                     <p class="card-text">Director: ${movie.director}</p>
                     <a href="#" onclick>Add to favorites</a>
                     <a href="#" class="d-none">Remove from favorites</a>

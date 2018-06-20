@@ -9,7 +9,13 @@ class HTTPRequestUtil
         xhttpRequest.onreadystatechange = function(){
             if(xhttpRequest.readyState == 4){
                 if(xhttpRequest.status == "200"){
-                    requestDonecallback(xhttpRequest.responseText);
+                    if(requestDoneCallback)
+                    {
+                        requestDoneCallback(xhttpRequest.responseText);
+                    }
+                    else{
+                        return xhttpRequest.responseText;
+                    }
                 }
             }
         }
