@@ -32,6 +32,3 @@ class MoviesPage
         }
     }
 }
-
-MoviesPage.favoriteSection;
-MoviesPage.allMoviesSection;
