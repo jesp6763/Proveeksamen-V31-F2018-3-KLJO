@@ -65,10 +65,14 @@ class MovieCard {
             <article class="card movie-item mx-auto">
                 <div class="card-img-top"></div>
                 <div class="card-body">
-                    <h4 class="card-title font-weight-light">${movie.title}</h4>
-                    <p class="card-text">Year: ${movie.year}</p>
-                    <p class="card-text">Genre: ${movie.genres}</p>
-                    <p class="card-text">Director: ${movie.director}</p>
+                    <h1 class="card-title font-weight-light">${movie.title}</h1>
+
+                    <ul class="list-unstyled">
+                        <li><p class="card-text">Year: ${movie.year}</p></li>
+                        <li><p class="card-text">Genre: ${movie.genres}</p></li>
+                        <li><p class="card-text">Director: ${movie.director}</p></li>
+                    </ul>
+
                     <a href="#" onclick>Add to favorites</a>
                     <a href="#" class="d-none">Remove from favorites</a>
                 </div>
